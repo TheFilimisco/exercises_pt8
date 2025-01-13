@@ -119,13 +119,12 @@ public class Main {
 
         //5
 
+/*
         Scanner input = new Scanner(System.in);
 //        System.out.println("Put position for iterator");
         int P = input.nextInt();
-
-        input.nextLine();
 //        System.out.println("'e' or 'd': ");
-        String d = input.nextLine();
+        String d = input.next();
 //        System.out.print("Put your length's arrays: ");
         int N = input.nextInt();
         int[] array = new int[N];
@@ -136,17 +135,116 @@ public class Main {
             array[i] = number;
         }
 
+        int[] newArray = new int[N];
+
+        int count = 0;
         switch (d){
             case "e":
-                System.arraycopy(array,P,array,0,array.length-1);
-                System.out.println(Arrays.toString(array));
+                for (int i = 0; i < newArray.length; i++) {
+                    if (newArray.length==2){
+                        newArray[0] = array[1];
+                        newArray[1] = array[0];
+                        break;
+                    }
+                    if (i+P > newArray.length-1){
+                        newArray[i] = array[count];
+                        count++;
+                    } else {
+                        newArray[i] = array[i+P];
+                    }
+                }
                 break;
             case "d":
+                for (int i = 0; i < newArray.length; i++) {
+                    if (newArray.length==2){
+                        newArray[0] = array[1];
+                        newArray[1] = array[0];
+                        break;
+                    }
+                    if (i-P < 0){
+                        newArray[i] = array[(array.length-(P-count))];
+                        count++;
+                    } else {
+                        newArray[i] = array[i-P];
+                    }
+                }
                 break;
         }
 
+        for (int i = 0; i < newArray.length; i++) {
+            System.out.print(newArray[i] + " ");
+        }
+*/
 
+        /*//6
+        Scanner input = new Scanner(System.in);
+        int inputNumberLength = input.nextInt();
+        Student[] students = new Student[inputNumberLength];
+        for (int i = 0; i < students.length; i++) {
+            String name = input.next();
+            double note = input.nextDouble();
+            students[i] = new Student(name,note);
+        }
+
+        int counterStudent = 0;
+        double accumStudent = 0;
+
+        for (Student student : students){
+            accumStudent+=student.note_grade;
+            counterStudent+=1;
+        }
+
+        double arithmeticMean = accumStudent/counterStudent;
+
+        for (Student student: students){
+            if (student.note_grade >= arithmeticMean){
+                System.out.println(student.name);
+            }
+        }*/
+
+        //7
 
 
     }
+
+
+    /*public static class Student{
+        private String name;
+        private double note_grade;
+
+        public Student(String name, double note_grade) {
+            this.name = name;
+            this.note_grade = note_grade;
+        }
+
+        public Student() {
+            this.name = "";
+            this.note_grade = 0;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public double getNote_grade() {
+            return note_grade;
+        }
+
+        public void setNote_grade(double note_grade) {
+            this.note_grade = note_grade;
+        }
+
+        @Override
+        public String toString() {
+            return "Student{" +
+                    "name='" + name + '\'' +
+                    ", note_grade=" + note_grade +
+                    '}';
+        }
+    }*/
 }
+
