@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class Main {
+public class ArraysExercises {
     public static void main(String[] args) {
 /*        // 1.
         Scanner input = new Scanner(System.in);
@@ -232,12 +229,137 @@ public class Main {
 
         //8
 
+/*        Scanner input = new Scanner(System.in);
+
+        int [] weights = new int[20];
+        for(int i = 0; i < weights.length; i++) {
+            int number = input.nextInt();
+            weights[i] = number;
+        }
+
+        for (int i = 0; i < 101; i++) {
+            String character = "-";
+            int number = 0;
+            int counterNumber = 0;
+            for (int j = 0; j < weights.length; j++) {
+                if (i==weights[j]){
+                    counterNumber+=1;
+                }
+            }
+            if (counterNumber>0){
+                number =  i;
+                System.out.print(number+" ");
+                System.out.println(character.repeat(counterNumber));
+            }
+
+        }*/
+
+        // 9
+
+        /*Scanner input = new Scanner(System.in);
+        int inputNumberLength = input.nextInt();
+        Team[] teams = new Team[inputNumberLength];
+        for (int i = 0; i < teams.length; i++) {
+            String name = input.next();
+            int note = input.nextInt();
+            teams[i] = new Team(name,note);
+        }
+        bubbleSort(teams,teams.length);
+        printArray(teams);*/
+
+        //10
+
+/*        String alphabet = "abcdefghijklmnopqrstuvwxyz";
+        Scanner input = new Scanner(System.in);
+        String inputString = input.nextLine();
+        String newText = inputString.replace(" ", "").toLowerCase();
+
+        int counterWordAlphabet = 0;
+
+        for (int i = 0; i <alphabet.length() ; i++) {
+            for (int j = 0; j < newText.length(); j++) {
+                if (alphabet.charAt(i)==newText.charAt(j)){
+                    counterWordAlphabet+=1;
+                    break;
+                }
+            }
+        }
+        if (counterWordAlphabet==alphabet.length()){
+            System.out.println("TRUE");
+        } else {
+            System.out.println("FALSE");
+        }*/
+
+        //11
 
 
 
 
 
     }
+
+/*    static void bubbleSort(Team[] arr, int n){
+        int i, j;
+        boolean swapped;
+
+        for (i = 0; i < n - 1; i++) {
+            swapped = false;
+
+            for (j = 0; j < n - i - 1; j++) {
+                if (arr[j].playersNumber > arr[j + 1].playersNumber) {
+                    Team temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            if (!swapped)
+                break;
+        }
+    }
+
+    // Function to print an array
+    static void printArray(Team[] arr){
+        for (int i = arr.length-1; i >= 0; i--) {
+            System.out.println(arr[i].name + " " + arr[i].playersNumber);
+        }
+    }
+
+    public static class Team{
+        private String name;
+        private int playersNumber;
+
+        public Team(String name, int playersNumber) {
+            this.name = name;
+            this.playersNumber = playersNumber;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getPlayersNumber() {
+            return playersNumber;
+        }
+
+        public void setPlayersNumber(int playersNumber) {
+            this.playersNumber = playersNumber;
+        }
+
+        @Override
+        public String toString() {
+            return "Team{" +
+                    "name='" + name + '\'' +
+                    ", playersNumber=" + playersNumber +
+                    '}';
+        }
+    }*/
+
 
 
     /*public static class Student{
