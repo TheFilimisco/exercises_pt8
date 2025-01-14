@@ -204,6 +204,38 @@ public class Main {
 
         //7
 
+/*        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        int[] listVotes = new int[N];
+        for(int i = 0; i < listVotes.length; i++) {
+            int number = input.nextInt();
+            listVotes[i] = number;
+        }
+
+        int maxValue = Integer.MIN_VALUE;
+        int numVote = 0;
+
+        for (int i = 0; i < 21; i++) {
+            int counter = 0;
+            for (int j = 0; j < listVotes.length; j++) {
+                if (i==listVotes[j]){
+                    counter+=1;
+                }
+            }
+            if (maxValue<counter){
+                maxValue=counter;
+                numVote=i;
+            }
+        }
+
+        System.out.println(numVote);*/
+
+        //8
+
+
+
+
+
 
     }
 
