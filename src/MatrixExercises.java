@@ -1,0 +1,122 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class MatrixExercises {
+    public static void main(String[] args) {
+        //1
+       /* Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        int M = input.nextInt();
+
+        int[][] A = new int[N][M];
+
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M ; j++) {
+                int number = input.nextInt();
+                A[i][j] = number;
+            }
+        }
+
+        int N2 = input.nextInt();
+        int M2 = input.nextInt();
+        int[][] B = new int[N2][M2];
+
+        for (int i = 0; i < N2; i++) {
+            for (int j = 0; j < M2 ; j++) {
+                int number = input.nextInt();
+                B[i][j] = number;
+            }
+        }
+
+        int[][] C = new int[N][M];
+
+        for (int i = 0; i < C.length; i++) {
+            for (int j = 0; j < C.length; j++) {
+                C[i][j] = A[i][j] + B[i][j];
+            }
+        }
+
+        for (int i = 0; i <C.length ; i++) {
+            for (int j = 0; j < C.length; j++) {
+                System.out.print(C[i][j] + " ");
+            }
+            System.out.println(" ");
+        }*/
+
+        //2
+
+/*        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+        int M = input.nextInt();
+
+        int[][] A = new int[N][M];
+
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M ; j++) {
+                int number = input.nextInt();
+                A[i][j] = number;
+            }
+        }
+
+        int[][] A2 = new int[M][N];
+
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < N; j++) {
+                A2[i][j] = A[j][i];
+                System.out.print(A2[i][j] + " ");
+            }
+            System.out.println(" ");
+        }*/
+
+        //3
+
+        Scanner input = new Scanner(System.in);
+        int N = input.nextInt();
+
+        int[][] A = new int[N][N];
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N ; j++) {
+                int number = input.nextInt();
+                A[i][j] = number;
+            }
+        }
+
+        int counter= 0;
+
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (A[i] != A[j]){
+                    counter+=1;
+                }
+            }
+        }
+
+        System.out.println(counter);
+
+
+        
+        
+
+//        for (int i = 0; i < N; i++) {
+//            for (int j = 0; j < N; j++) {
+//                System.out.print(A[i][j] + " ");
+//            }
+//            System.out.println(" ");
+//        }
+
+
+
+
+        
+//        for (int i = N-1 ; i >= 0; i--) {
+//            for (int j = M-1; j >= 0; j--) {
+//                System.out.print(A[i][j] + " ");
+//            }
+//            System.out.println(" ");
+//        }
+
+    }
+}
