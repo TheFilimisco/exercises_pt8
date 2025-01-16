@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class MatrixExercises {
     public static void main(String[] args) {
         //1
-       /* Scanner input = new Scanner(System.in);
+        /*Scanner input = new Scanner(System.in);
         int N = input.nextInt();
         int M = input.nextInt();
 
@@ -72,33 +72,33 @@ public class MatrixExercises {
 
         //3
 
-        Scanner input = new Scanner(System.in);
-        int N = input.nextInt();
+//        Scanner input = new Scanner(System.in);
+//        int N = input.nextInt();
+//
+//        int[][] A = new int[N][N];
+//
+//        for (int i = 0; i < N; i++) {
+//            for (int j = 0; j < N ; j++) {
+//                int number = input.nextInt();
+//                A[i][j] = number;
+//            }
+//        }
+//        String hisSymmetric ="";
+//        for (int i = 0; i < N; i++) {
+//            for (int j = 0; j < N; j++) {
+//                if (((A[i] != A[j]) && (A[i][j]!=A[j][i]))){
+//                    hisSymmetric="FALSE";
+//                    break;
+//                }
+//            }
+//        }
+//        if (hisSymmetric.equals("FALSE")){
+//            System.out.println("FALSE");
+//        } else {
+//            System.out.println("TRUE");
+//        }
 
-        int[][] A = new int[N][N];
 
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N ; j++) {
-                int number = input.nextInt();
-                A[i][j] = number;
-            }
-        }
-
-        int counter= 0;
-
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < N; j++) {
-                if (A[i] != A[j]){
-                    counter+=1;
-                }
-            }
-        }
-
-        System.out.println(counter);
-
-
-        
-        
 
 //        for (int i = 0; i < N; i++) {
 //            for (int j = 0; j < N; j++) {
@@ -107,10 +107,6 @@ public class MatrixExercises {
 //            System.out.println(" ");
 //        }
 
-
-
-
-        
 //        for (int i = N-1 ; i >= 0; i--) {
 //            for (int j = M-1; j >= 0; j--) {
 //                System.out.print(A[i][j] + " ");
@@ -118,5 +114,64 @@ public class MatrixExercises {
 //            System.out.println(" ");
 //        }
 
+
+        //4
+
+        Scanner input = new Scanner(System.in);
+        String nameInput = input.nextLine();
+        City [][] cities = new City[6][6];
+
+
+        for (int i = 0; i < cities.length ; i++) {
+            for (int j = 0; j < cities.length; j++) {
+                if (cities[i] == cities[j]){
+                    cities[i][j] = new City(nameInput,0);
+                }
+                System.out.print(cities[i][j] + " ");
+
+            }
+            System.out.println(" ");
+        }
+
+
+
+
+
     }
+
+    public static class City{
+        private String name;
+        private int km;
+
+        public City(String name, int km) {
+            this.name = name;
+            this.km = km;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getKm() {
+            return km;
+        }
+
+        public void setKm(int km) {
+            this.km = km;
+        }
+
+        @Override
+        public String toString() {
+            return "City{" +
+                    "name='" + name + '\'' +
+                    ", km=" + km +
+                    '}';
+        }
+    }
+
+
 }
