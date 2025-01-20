@@ -117,18 +117,63 @@ public class MatrixExercises {
 
         //4
 
+//        Scanner input = new Scanner(System.in);
+//        String nameInput = input.nextLine();
+//        City [][] cities = new City[6][6];
+//
+//
+//        for (int i = 0; i < cities.length ; i++) {
+//            for (int j = 0; j < cities.length; j++) {
+//                if (cities[i] == cities[j]){
+//                    cities[i][j] = new City(nameInput,0);
+//                }
+//                System.out.print(cities[i][j] + " ");
+//
+//            }
+//            System.out.println(" ");
+//        }
+//
+
         Scanner input = new Scanner(System.in);
-        String nameInput = input.nextLine();
-        City [][] cities = new City[6][6];
+        int inputNumberArray = input.nextInt();
 
+        String[][] board = new String[inputNumberArray][inputNumberArray];
+        input.nextLine();
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board.length; j++) {
+                board[i][j] = input.nextLine();
+            }
+        }
 
-        for (int i = 0; i < cities.length ; i++) {
-            for (int j = 0; j < cities.length; j++) {
-                if (cities[i] == cities[j]){
-                    cities[i][j] = new City(nameInput,0);
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j <board.length ; j++) {
+                System.out.print(board[i][j] + " ");
+            }
+            System.out.println(" ");
+        }
+
+        int x = input.nextInt();
+        int y = input.nextInt();
+        while (!(x==-1 && y==-1)){
+            if (board[x][y].equals("V")){
+                board[x][y] = "A";
+            }
+            x = input.nextInt();
+            y = input.nextInt();
+        }
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j <board.length ; j++) {
+                if (board[i][j].equals("V")){
+                    System.out.println("NO GUANYA");
+                    break;
                 }
-                System.out.print(cities[i][j] + " ");
+            }
+        }
 
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j <board.length ; j++) {
+                System.out.print(board[i][j] + " ");
             }
             System.out.println(" ");
         }
@@ -136,42 +181,41 @@ public class MatrixExercises {
 
 
 
-
     }
 
-    public static class City{
-        private String name;
-        private int km;
-
-        public City(String name, int km) {
-            this.name = name;
-            this.km = km;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getKm() {
-            return km;
-        }
-
-        public void setKm(int km) {
-            this.km = km;
-        }
-
-        @Override
-        public String toString() {
-            return "City{" +
-                    "name='" + name + '\'' +
-                    ", km=" + km +
-                    '}';
-        }
-    }
+//    public static class City{
+//        private String name;
+//        private int km;
+//
+//        public City(String name, int km) {
+//            this.name = name;
+//            this.km = km;
+//        }
+//
+//        public String getName() {
+//            return name;
+//        }
+//
+//        public void setName(String name) {
+//            this.name = name;
+//        }
+//
+//        public int getKm() {
+//            return km;
+//        }
+//
+//        public void setKm(int km) {
+//            this.km = km;
+//        }
+//
+//        @Override
+//        public String toString() {
+//            return "City{" +
+//                    "name='" + name + '\'' +
+//                    ", km=" + km +
+//                    '}';
+//        }
+//    }
 
 
 }
