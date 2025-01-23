@@ -134,7 +134,10 @@ public class MatrixExercises {
 //        }
 //
 
-        Scanner input = new Scanner(System.in);
+
+
+        //5
+/*        Scanner input = new Scanner(System.in);
         int inputNumberArray = input.nextInt();
 
         String[][] board = new String[inputNumberArray][inputNumberArray];
@@ -176,7 +179,77 @@ public class MatrixExercises {
                 System.out.print(board[i][j] + " ");
             }
             System.out.println(" ");
+        }*/
+
+        //6
+
+        Scanner input = new Scanner(System.in);
+        int inputSizeArray = input.nextInt();
+
+
+
+        int[][] map = new int[inputSizeArray][inputSizeArray];
+        int pointGimcana = input.nextInt();
+
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map.length; j++) {
+                map[i][j] = input.nextInt();
+            }
         }
+
+
+//        for (int i = 0; i < map.length ; i++) {
+//            for (int j = 0; j < map.length ; j++) {
+//                System.out.print(map[j][i] + " ");
+//            }
+//            System.out.println(" ");
+//        }
+//
+//        for (int i = 0; i < map.length; i++) {
+//            for (int j = 0; j < map.length; j++) {
+//                System.out.print(map[i][j] + " ");
+//            }
+//            System.out.println(" ");
+//        }
+
+        int counterPosition = 0;
+
+        int x = input.nextInt();
+        int y = input.nextInt();
+
+        while (pointGimcana>0){
+
+            int place = 1;
+            for (int i = x; i < map.length; i++) {
+                for ( int j = y; j < map.length; j++) {
+                    System.out.println(map[i][j]);
+                    if (map[i][j]==place || map[j][i]==place) {
+                        place+=1;
+                        pointGimcana--;
+                        break;
+                    } else {
+                        counterPosition++;
+                    }
+                    if (map[i][j]==map[inputSizeArray-1][inputSizeArray-1]) {
+                        x = 0;
+                        y = 0;
+                    }
+                }
+
+            }
+        }
+
+        System.out.println(pointGimcana);
+        System.out.println(counterPosition);
+
+
+
+
+
+
+
+
+
 
 
 
