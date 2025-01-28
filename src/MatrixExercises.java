@@ -183,64 +183,111 @@ public class MatrixExercises {
 
         //6
 
-        Scanner input = new Scanner(System.in);
-        int inputSizeArray = input.nextInt();
-
-
-
-        int[][] map = new int[inputSizeArray][inputSizeArray];
-        int pointGimcana = input.nextInt();
-
-        for (int i = 0; i < map.length; i++) {
-            for (int j = 0; j < map.length; j++) {
-                map[i][j] = input.nextInt();
-            }
-        }
-
-
-//        for (int i = 0; i < map.length ; i++) {
-//            for (int j = 0; j < map.length ; j++) {
-//                System.out.print(map[j][i] + " ");
-//            }
-//            System.out.println(" ");
-//        }
+//        Scanner input = new Scanner(System.in);
+//        int inputSizeArray = input.nextInt();
+//
+//        int[][] map = new int[inputSizeArray][inputSizeArray];
+//        int pointGimcana = input.nextInt();
 //
 //        for (int i = 0; i < map.length; i++) {
 //            for (int j = 0; j < map.length; j++) {
-//                System.out.print(map[i][j] + " ");
+//                map[i][j] = input.nextInt();
 //            }
-//            System.out.println(" ");
 //        }
+//
+//        int x = input.nextInt();
+//        int y = input.nextInt();
+//
+//        int counterWalkMain = 0;
+//        int target = 1;
+//
+//        while (pointGimcana>0){
+//
+//            boolean found = false;
+//            int counterWalk = 0;
+//
+//
+//            for (int i = x; i <map.length && !found ; i++) {
+//                for (int j = y; j < map.length && !found ; j++) {
+//                    counterWalk++;
+//                    if (map[i][j] == target){
+//                        found = true;
+//                        x = i;
+//                        y = j;
+//                        counterWalkMain += counterWalk;
+//                        target++;
+//                    }
+//                }
+//            }
+//            if (!found) {
+//                break;
+//            }
+//            pointGimcana--;
+//
+//        }
+//
+//        System.out.println(counterWalkMain);
 
-        int counterPosition = 0;
+//        Scanner input = new Scanner(System.in);
+//        int inputSizeArray = input.nextInt();
+//
+//        int[][] map = new int[inputSizeArray][inputSizeArray];
+//        int pointGimcana = input.nextInt();
+//
+//        for (int i = 0; i < map.length; i++) {
+//            for (int j = 0; j < map.length; j++) {
+//                map[i][j] = input.nextInt();
+//            }
+//        }
+//
+//        int x = input.nextInt();
+//        int y = input.nextInt();
+//
+//        int counterWalkMain = 0;
+//        int target = 1;
+//
+//        while (pointGimcana > 0) {
+//            boolean found = false;
+//            int shortestDistance = Integer.MAX_VALUE;
+//            int newX = x, newY = y;
+//
+//            for (int i = 0; i < map.length; i++) {
+//                for (int j = 0; j < map.length; j++) {
+//                    if (map[i][j] == target) {
+//                        int distance = Math.abs(x - i) + Math.abs(y - j);
+//                        if (distance < shortestDistance) {
+//                            shortestDistance = distance;
+//                            newX = i;
+//                            newY = j;
+//                            found = true;
+//                        }
+//                    }
+//                }
+//            }
+//            if (!found) {
+//                break;
+//            }
+//            x = newX;
+//            y = newY;
+//            counterWalkMain += shortestDistance;
+//            target++;
+//            pointGimcana--;
+//        }
+//
+//        System.out.println(counterWalkMain);
+//    }
 
-        int x = input.nextInt();
-        int y = input.nextInt();
 
-        while (pointGimcana>0){
 
-            int place = 1;
-            for (int i = x; i < map.length; i++) {
-                for ( int j = y; j < map.length; j++) {
-                    System.out.println(map[i][j]);
-                    if (map[i][j]==place || map[j][i]==place) {
-                        place+=1;
-                        pointGimcana--;
-                        break;
-                    } else {
-                        counterPosition++;
-                    }
-                    if (map[i][j]==map[inputSizeArray-1][inputSizeArray-1]) {
-                        x = 0;
-                        y = 0;
-                    }
-                }
 
-            }
-        }
 
-        System.out.println(pointGimcana);
-        System.out.println(counterPosition);
+
+
+
+
+//
+//        System.out.println(pointGimcana);
+//        System.out.println(counterPosition);
 
 
 
@@ -255,6 +302,7 @@ public class MatrixExercises {
 
 
     }
+}
 
 //    public static class City{
 //        private String name;
@@ -291,4 +339,4 @@ public class MatrixExercises {
 //    }
 
 
-}
+
